@@ -1,0 +1,9 @@
+| Module (anglais)     | Nom français                   | Description                                                                                                                            |
+| -------------------- | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| auth-service         | **Service d’authentification** | Gère l’inscription, la connexion, la gestion des mots de passe et la génération de tokens JWT pour sécuriser les utilisateurs.         |
+| product-service      | **Service produits**           | Gère le catalogue de produits : création, modification, suppression, recherche et affichage des produits.                              |
+| order-service        | **Service commandes**          | Gère le panier, la création de commandes, le suivi des paiements et l’historique des commandes.                                        |
+| shop-service         | **Service boutiques**          | Permet aux vendeurs de créer et gérer leur boutique, personnaliser les informations, et suivre les ventes.                             |
+| review-service       | **Service avis**               | Permet aux acheteurs de laisser des commentaires et des notes sur les produits et les vendeurs, pour renforcer la confiance.           |
+| message-service      | **Service messagerie**         | Gère la communication sécurisée entre acheteurs et vendeurs à l’intérieur de la plateforme.                                            |
+| notification-service | **Service notifications**      | Envoie des notifications aux utilisateurs : SMS, emails, notifications push ou via WhatsApp pour les commandes, promotions et alertes. |

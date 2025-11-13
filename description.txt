@@ -1,0 +1,131 @@
+Parfait 😄 ! On va créer un **cahier des charges clair et structuré** pour **Nesbi Market**, étape par étape. Je te propose de suivre ce plan :
+
+---
+
+# Cahier des charges – Nesbi Market
+
+## 1️⃣ Contexte et objectif du projet
+
+**Contexte :**
+Le Cameroun connaît une croissance rapide du e-commerce, avec une adoption massive du **Mobile Money** et une utilisation prédominante des smartphones. Les petites entreprises et particuliers ont besoin d’une plateforme fiable, rapide et sécurisée pour vendre et acheter des produits localement.
+
+**Objectif principal :**
+Créer une **marketplace mobile-first** pour connecter acheteurs et vendeurs au Cameroun, en offrant :
+
+* Une expérience utilisateur simple et rapide
+* La possibilité pour tout commerçant ou particulier de vendre facilement
+* Des paiements sécurisés via Mobile Money et carte bancaire
+* Un suivi de livraison transparent
+
+---
+
+## 2️⃣ Périmètre fonctionnel
+
+### 2.1 Acteurs
+
+| Acteur         | Rôle                                                                                       |
+| -------------- | ------------------------------------------------------------------------------------------ |
+| Acheteur       | Parcours shopping, paiement, suivi commande, avis                                          |
+| Vendeur        | Création boutique, gestion produits, suivi commandes, communication avec acheteurs         |
+| Administrateur | Gestion utilisateurs, validation vendeurs, gestion contenus, suivi statistiques, reporting |
+
+---
+
+### 2.2 Fonctionnalités principales
+
+#### 2.2.1 Authentification & compte utilisateur
+
+* Inscription via e-mail, téléphone ou réseaux sociaux
+* Login / logout sécurisé
+* Mot de passe oublié / réinitialisation
+* Profil utilisateur (nom, photo, adresse, méthode de paiement)
+
+#### 2.2.2 Catalogue & recherche produits
+
+* Liste des produits par catégories
+* Filtres : ville, prix, catégorie, nouveauté, meilleure note
+* Barre de recherche intelligente
+* Fiche produit détaillée (description, images, prix, stock, avis)
+
+#### 2.2.3 Espace vendeur / boutique
+
+* Création d’une boutique personnalisable
+* Gestion produits : ajout, modification, suppression
+* Gestion des stocks et prix
+* Suivi des commandes et revenus
+* Statistiques de vente (produits les plus vendus, chiffre d’affaires, avis)
+
+#### 2.2.4 Paiements
+
+* Mobile Money : MTN, Orange
+* Carte bancaire (Visa/Mastercard)
+* Paiement à la livraison
+* Facturation automatique
+
+#### 2.2.5 Livraison
+
+* Système de suivi de commande
+* Calcul automatique des frais et délai selon ville/quartier
+* Notification push / SMS / WhatsApp pour chaque étape de la livraison
+
+#### 2.2.6 Avis & messagerie
+
+* Système de notation vendeur/produit
+* Commentaires sur produits et expérience
+* Messagerie interne sécurisée entre acheteur et vendeur
+
+#### 2.2.7 Notifications
+
+* Commande reçue, paiement confirmé, produit expédié/livré
+* Promotions et offres spéciales
+
+#### 2.2.8 Administration
+
+* Gestion des utilisateurs (vérification vendeurs, suppression comptes frauduleux)
+* Gestion des catégories et produits signalés
+* Dashboard statistiques globales (transactions, utilisateurs actifs, produits populaires)
+
+---
+
+## 3️⃣ Exigences techniques
+
+| Aspect          | Détail                                                     |
+| --------------- | ---------------------------------------------------------- |
+| Frontend        | React / Next.js + TailwindCSS, responsive/mobile-first     |
+| Backend         | FastAPI (Python) ou Node.js (Express), API REST ou GraphQL |
+| Base de données | PostgreSQL, Redis pour cache/session                       |
+| Stockage médias | Cloudinary ou S3                                           |
+| Paiement        | MTN Mobile Money, Orange Money, Stripe (futur)             |
+| Notifications   | Push notifications, SMS, e-mail, WhatsApp API              |
+| Sécurité        | HTTPS, JWT/OAuth2, protection des données personnelles     |
+| Hébergement     | Render, Vercel, Railway ou AWS selon budget                |
+| Monitoring      | Logs centralisés, alertes erreurs, uptime 99%              |
+
+---
+
+## 4️⃣ Parcours utilisateur (exemple simplifié)
+
+1. **Acheteur** :
+
+   * S’inscrit → Parcourt les produits → Ajoute au panier → Choisit mode de paiement → Suit livraison → Laisse avis
+
+2. **Vendeur** :
+
+   * S’inscrit → Crée boutique → Ajoute produits → Gère commandes → Suit ventes et avis
+
+3. **Admin** :
+
+   * Valide nouveaux vendeurs → Surveille activités → Gère problèmes / signalements → Analyse statistiques
+
+---
+
+## 5️⃣ Contraintes & bonnes pratiques
+
+* Mobile-first et compatible 2G/3G
+* Multi-langue : français & anglais
+* UX simple et intuitive
+* Optimisation SEO et performance
+* Conformité légale : CGU, politique de confidentialité, mentions légales
+* Scalabilité pour supporter croissance (ajout de vendeurs, trafic important)
+
+
