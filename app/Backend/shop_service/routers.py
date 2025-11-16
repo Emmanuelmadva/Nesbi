@@ -1,7 +1,8 @@
 # shop_service/routers.py
-from fastapi import APIRouter, Depends, HTTPException, UploadFile, File, Response, Form
+from fastapi import APIRouter, Depends, HTTPException, UploadFile, File, Response, Form, Query
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
+from sqlalchemy import or_, func, and_
 from typing import List
 from database import get_db
 from models import Shop
@@ -65,6 +66,28 @@ def create_shop(
         raise HTTPException(status_code=400, detail="Erreur : doublon détecté")
     db.refresh(shop)
     return shop
+
+
+# -------------------------------
+#recherche par mot clé
+# -------------------------------
+@router.get("/search", response_model=List[ShopResponse])
+def search_shops(
+    q: str = Query(..., description="Mot clé pour rechercher une boutique"),
+    db: Session = Depends(get_db),
+    user=Depends(get_current_user)
+):
+    q = q.strip()
+    shops = db.query(Shop).filter(
+        and_(
+            Shop.owner_id == user["id"],
+            or_(
+                func.lower(func.coalesce(Shop.name, '')).ilike(f"%{q.lower()}%"),
+                func.lower(func.coalesce(Shop.description, '')).ilike(f"%{q.lower()}%")
+            )
+        )
+    ).all()
+    return shops
 
 # -------------------------------
 # Get shop (seul le propriétaire peut accéder)
