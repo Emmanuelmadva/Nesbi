@@ -1,7 +1,7 @@
 # shop_service/main.py
 from fastapi import FastAPI
-from routers import router as shop_router
-from database import Base, engine
+from app.Backend.shop_service.routers import router as shop_router
+from app.Backend.product_service.database import Base, engine
 
 app = FastAPI(title="Shop Service - Nesbi Market")
 

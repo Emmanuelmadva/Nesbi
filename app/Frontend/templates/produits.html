@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nesbi Market — Produits</title>
+  <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container py-3">
+    <!-- Bouton toggle Sidebar -->
+    <button class="btn btn-success mb-3 w-100" id="toggleSidebar">☰ Catégories</button>
+
+    <!-- Sidebar / Menu des catégories -->
+    <div id="sidebar" class="p-3 mb-3" style="background-color:#00843D; color:white; display:none;">
+      <h5>Catégories</h5>
+      <ul class="list-group" id="categoriesList">
+        <!-- Les catégories seront insérées ici par JS -->
+      </ul>
+    </div>
+
+    <!-- Contenu principal -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm mb-3">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Nesbi Market</a>
+      </div>
+    </nav>
+
+    <section class="py-3">
+      <h2 class="mb-4">Nos articles</h2>
+      <div class="row g-4" id="productsContainer">
+        <!-- Les cartes produits seront insérées ici dynamiquement -->
+      </div>
+    </section>
+  </div>
+
+  <script src="/static/js/produits.js"></script>
+  <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

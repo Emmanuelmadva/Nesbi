@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nesbi Market — Accueil</title>
+    <!-- Favicon vide pour éviter le 404 -->
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Nesbi</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#features">Fonctionnalités</a></li>
+          <li class="nav-item"><a class="nav-link" href="#categories">Catégories</a></li>
+          <li class="nav-item"><a class="nav-link" href="#partners">Partenaires</a></li>
+            <li class="nav-item">
+            <button class="btn btn-outline-success ms-3" data-bs-toggle="modal" data-bs-target="#authModal">
+              Connexion / Inscription
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Hero Section -->
+<header class="bg-success text-white text-center py-5">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Nesbi Market</h1>
+    <p class="lead">Ici ça cours et c'est propre ... </p>
+    <a href="/produits" class="btn btn-warning btn-lg">Voir nos articles</a>
+  </div>
+</header>
+
+
+  <!-- Features Section -->
+  <section id="features" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Fonctionnalités principales</h2>
+      <div class="row g-4">
+        <div class="col-md-4 text-center">
+          <div class="card h-100 shadow-sm p-4">
+            <i class="bi bi-shop fs-1 text-success mb-3"></i>
+            <h5>Boutique en ligne</h5>
+            <p>Gérez vos produits et vos ventes facilement.</p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="card h-100 shadow-sm p-4">
+            <i class="bi bi-truck fs-1 text-warning mb-3"></i>
+            <h5>Livraison rapide</h5>
+            <p>Suivi des commandes et livraison chez vos clients.</p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="card h-100 shadow-sm p-4">
+            <i class="bi bi-currency-dollar fs-1 text-danger mb-3"></i>
+            <h5>Gestion financière</h5>
+            <p>Suivi des revenus, dépenses et promotions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Pricing Section -->
+<section id="pricing" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Plans pour les professionnels</h2>
+    <div class="row g-4 justify-content-center">
+      <!-- Basique -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm p-4">
+          <h5 class="fw-bold">Basique</h5>
+          <p class="text-muted">Pour commencer votre boutique</p>
+          <h3 class="my-3">$10 / mois</h3>
+          <ul class="list-unstyled mb-3">
+            <li>10 produits</li>
+            <li>Support basique</li>
+            <li>Accès au tableau de bord</li>
+          </ul>
+          <a href="#signup" class="btn btn-success">Choisir</a>
+        </div>
+      </div>
+      <!-- Pro -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm p-4 border-success">
+          <h5 class="fw-bold">Pro</h5>
+          <p class="text-muted">Pour les commerçants actifs</p>
+          <h3 class="my-3">$25 / mois</h3>
+          <ul class="list-unstyled mb-3">
+            <li>50 produits</li>
+            <li>Support prioritaire</li>
+            <li>Analytique avancée</li>
+          </ul>
+          <a href="#signup" class="btn btn-success">Choisir</a>
+        </div>
+      </div>
+      <!-- Premium -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm p-4">
+          <h5 class="fw-bold">Premium</h5>
+          <p class="text-muted">Pour les entreprises ambitieuses</p>
+          <h3 class="my-3">$50 / mois</h3>
+          <ul class="list-unstyled mb-3">
+            <li>Produits illimités</li>
+            <li>Support 24/7</li>
+            <li>Intégration marketing</li>
+          </ul>
+          <a href="#signup" class="btn btn-success">Choisir</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Témoignages de nos clients</h2>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4">
+        <div class="card p-4 shadow-sm">
+          <p class="mb-2">"Grâce à Nesbi Market, mes ventes ont doublé en 3 mois !"</p>
+          <h6 class="fw-bold mb-0">Marie T., commerçante</h6>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 shadow-sm">
+          <p class="mb-2">"Plateforme simple et efficace, je recommande."</p>
+          <h6 class="fw-bold mb-0">Jean P., vendeur</h6>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 shadow-sm">
+          <p class="mb-2">"Le support est rapide et très réactif !"</p>
+          <h6 class="fw-bold mb-0">Fatou S., entrepreneuse</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Questions fréquentes</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+            Comment créer ma boutique sur Nesbi Market ?
+          </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Cliquez sur "Commencer", remplissez le formulaire et votre boutique sera en ligne en quelques minutes.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+            Quels moyens de paiement sont disponibles ?
+          </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Nous acceptons cartes bancaires, mobile money et paiement à la livraison.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+            Puis-je changer mon plan plus tard ?
+          </button>
+        </h2>
+        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Oui, vous pouvez passer d’un plan à l’autre à tout moment depuis votre tableau de bord.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Categories Section -->
+  <section id="categories" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Catégories populaires</h2>
+      <div class="row g-3">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card h-100">
+            <img src="/static/assets/modes.jpg" class="card-img-top" alt="Mode">
+            <div class="card-body">
+              <h6 class="card-title">Mode</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card h-100">
+            <img src="/static/assets/electronics.webp" class="card-img-top" alt="Électronique">
+            <div class="card-body">
+              <h6 class="card-title">Électronique</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card h-100">
+            <img src="/static/assets/alimentation.jpg" class="card-img-top" alt="Alimentaire">
+            <div class="card-body">
+              <h6 class="card-title">Alimentaire</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-0">© 2025 Nesbi Market. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Modal Connexion / Inscription -->
+<!-- Modal Connexion / Inscription -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="authModalLabel">Connexion</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      </div>
+      <div class="modal-body">
+
+        <!-- Formulaire Connexion -->
+        <form id="loginForm">
+          <div class="mb-3">
+            <label for="loginEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="loginEmail" placeholder="Votre email">
+          </div>
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label">Mot de passe</label>
+            <input type="password" class="form-control" id="loginPassword" placeholder="Mot de passe">
+          </div>
+          <button type="submit" class="btn btn-success w-100">Se connecter</button>
+
+          <!-- Lien vers Inscription -->
+          <div class="text-center mt-3">
+            <small>Pas de compte ? <a href="#" id="showSignup">Inscription</a></small>
+          </div>
+        </form>
+
+        <!-- Formulaire Inscription (initialement caché) -->
+        <form id="signupForm" class="d-none mt-3">
+          <div class="mb-3">
+            <label for="signupName" class="form-label">Nom complet</label>
+            <input type="text" class="form-control" id="signupName" placeholder="Votre nom">
+          </div>
+          <div class="mb-3">
+            <label for="signupEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="signupEmail" placeholder="Votre email">
+          </div>
+          <div class="mb-3">
+            <label for="signupPassword" class="form-label">Mot de passe</label>
+            <input type="password" class="form-control" id="signupPassword" placeholder="Mot de passe">
+          </div>
+          <button type="submit" class="btn btn-success w-100">Créer un compte</button>
+
+          <!-- Lien vers Connexion -->
+          <div class="text-center mt-2">
+            <small>Déjà un compte ? <a href="#" id="showLogin">Connexion</a></small>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/static/js/outils/notification.js"></script>
+<script src="/static/js/auth.js"></script>
+
+</body>
+</html>

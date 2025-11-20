@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, Float, ForeignKey, LargeBinary, DateTime
 from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
-from database import Base
+from app.Database.database import Base
 
 class Product(Base):
     __tablename__ = "products"
@@ -13,6 +13,7 @@ class Product(Base):
     description = Column(String(500))
     price = Column(Float, nullable=False)
     stock = Column(Integer, nullable=False, default=0)
+    category = Column(String, nullable=True)
 
     # Image
     image = Column(LargeBinary, nullable=True)

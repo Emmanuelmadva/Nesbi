@@ -1,0 +1,5 @@
+frontend/
+├── assets/      # Images, polices et autres ressources
+├── css/         # Feuilles de style (style.css, tailwind.css si besoin)
+├── js/          # Scripts JavaScript (main.js, cart.js, api.js, etc.)
+└── templates/   # Composants et sections réutilisables (header, footer, navbar, product-card, etc.)

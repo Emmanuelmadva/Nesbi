@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — Nesbi Market</title>
+  <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="/static/css/dash.css"> <!-- optionnel -->
+</head>
+<body>
+
+<!-- Overlay pour fermer la sidebar sur mobile -->
+<div id="overlay"></div>
+
+<!-- Sidebar -->
+<nav id="sidebar">
+  <h4 class="text-center text-white py-3">Dashboard</h4>
+  <a href="#"><i class="bi bi-speedometer2"></i> Accueil</a>
+  <a href="#"><i class="bi bi-box-seam"></i> Produits</a>
+  <a href="#"><i class="bi bi-people"></i> Utilisateurs</a>
+  <a href="#"><i class="bi bi-bar-chart"></i> Statistiques</a>
+  <a href="#"><i class="bi bi-gear"></i> Paramètres</a>
+</nav>
+
+<!-- Main content -->
+<div id="main-content">
+  <button class="btn btn-outline-secondary mb-3" id="toggleSidebar">
+    <i class="bi bi-list"></i> Menu
+  </button>
+
+  <h2>Bienvenue sur le Dashboard</h2>
+  <p>Utilisez le menu à gauche pour naviguer.</p>
+
+  <div class="row g-4 mt-3">
+    <div class="col-md-3"><div class="card text-white bg-success p-3"><h5>Ventes</h5><p id="sales-count">0</p></div></div>
+    <div class="col-md-3"><div class="card text-white bg-primary p-3"><h5>Produits</h5><p id="products-count">0</p></div></div>
+    <div class="col-md-3"><div class="card text-white bg-warning p-3"><h5>Clients</h5><p id="clients-count">0</p></div></div>
+    <div class="col-md-3"><div class="card text-white bg-danger p-3"><h5>Commandes</h5><p id="orders-count">0</p></div></div>
+  </div>
+</div>
+
+<script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/static/js/dash.js"></script>
+</body>
+</html>
