@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const loginForm = document.getElementById("loginForm");
   const signupForm = document.getElementById("signupForm");
@@ -50,18 +48,11 @@ loginForm.addEventListener("submit", async function (e) {
     toggleLoading(loginForm, false);
 
     if (res.ok && data.access_token) {
-      // Stockage du token pour la session
       localStorage.setItem("token", data.access_token);
-      showNotification("Connexion réussie", "success");
 
-      // Fermer le modal si ouvert
       if (!modal) modal = bootstrap.Modal.getInstance(modalElement);
       modal.hide();
-
-      // Redirection vers le dashboard
-      window.location.href = "/dashboard";  // À adapter selon ta route
     } else {
-      showNotification(data.detail || "Identifiants incorrects", "error");
     }
   } catch (error) {
     toggleLoading(loginForm, false);
@@ -69,7 +60,6 @@ loginForm.addEventListener("submit", async function (e) {
     showNotification("Erreur réseau", "error");
   }
 });
-
 
   /* -------------------------
             REGISTER
@@ -95,14 +85,12 @@ loginForm.addEventListener("submit", async function (e) {
       toggleLoading(signupForm, false);
 
       if (res.ok && data.id) {
-        showNotification("Compte créé avec succès ", "success");
 
         signupForm.classList.add("d-none");
         loginForm.classList.remove("d-none");
         modalTitle.textContent = "Connexion";
 
       } else {
-        showNotification(data.detail || "Erreur lors de l'inscription ", "error");
       }
     } catch (error) {
       toggleLoading(signupForm, false);

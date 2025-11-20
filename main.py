@@ -24,7 +24,3 @@ async def page_acceuil(request: Request):
 @app.get("/produits", response_class=HTMLResponse)
 async def read_produits(request: Request):
     return templates.TemplateResponse("produits.html", {"request": request})
-
-@app.get("/dashboard", response_class=HTMLResponse)
-async def read_produits(request: Request):
-    return templates.TemplateResponse("dash.html", {"request": request})
