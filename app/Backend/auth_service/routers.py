@@ -1,13 +1,13 @@
 from fastapi import APIRouter, Depends, HTTPException, Header, status
 from sqlalchemy.orm import Session
 from typing import Optional
-from database import SessionLocal
-from models import User, UserRole
-from schemas import UserCreate, UserLogin, UserResponse, TokenResponse
-from utils import get_password_hash, verify_password, create_access_token, decode_access_token
-from schemas import ChangePasswordRequest
+from app.Backend.auth_service.database import SessionLocal
+from app.Backend.auth_service.models import User, UserRole
+from app.Backend.auth_service.schemas import UserCreate, UserLogin, UserResponse, TokenResponse
+from app.Backend.auth_service.utils import get_password_hash, verify_password, create_access_token, decode_access_token
+from app.Backend.auth_service.schemas import ChangePasswordRequest
 
-auth_router = APIRouter()
+auth_router = APIRouter(prefix="/auth", tags=["authentification"])
 
 # Dependency pour DB
 def get_db():

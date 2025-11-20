@@ -1,15 +1,15 @@
-# shop_service/routers.py
 from fastapi import APIRouter, Depends, HTTPException, UploadFile, File, Response, Form, Query
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy import or_, func, and_
 from typing import List
-from database import get_db
-from models import Shop
-from schemas import ShopCreate, ShopUpdate, ShopResponse
+from app.Backend.shop_service.database import get_db
+from app.Backend.shop_service.models import Shop
+from app.Backend.shop_service.schemas import ShopCreate, ShopUpdate, ShopResponse
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 import jwt
-from config import JWT_SECRET_KEY, JWT_ALGORITHM
+from app.Backend.shop_service.config import JWT_SECRET_KEY, JWT_ALGORITHM
+from app.Backend.product_service.models import Product
 
 router = APIRouter(prefix="/shops", tags=["shops"])
 security = HTTPBearer()  # Pour récupérer le header Authorization
@@ -30,6 +30,7 @@ def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(securit
         raise HTTPException(status_code=401, detail="Token expiré")
     except jwt.InvalidTokenError:
         raise HTTPException(status_code=401, detail="Token invalide")
+
 
 # -------------------------------
 # Create shop avec logo

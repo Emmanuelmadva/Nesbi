@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Boolean, LargeBinary
-from database import Base
+from app.Database.database import Base
 
 
 class Shop(Base):

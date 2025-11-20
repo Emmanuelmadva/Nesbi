@@ -1,5 +1,5 @@
 from pydantic import BaseModel, EmailStr
-from models import UserRole
+from app.Backend.auth_service.models import UserRole
 
 class UserCreate(BaseModel):
     username: str

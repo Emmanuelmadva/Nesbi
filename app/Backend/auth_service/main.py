@@ -4,7 +4,7 @@ from database import init_db
 
 app = FastAPI(title="Auth Service - Nesbi Market")
 
-app.include_router(auth_router, prefix="/auth")
+app.include_router(auth_router)
 
 # Créer les tables au démarrage
 init_db()

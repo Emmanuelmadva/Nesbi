@@ -1,7 +1,7 @@
 # shop_service/database.py
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
-from config import DATABASE_URL
+from app.Backend.product_service.config import DATABASE_URL
 
 # Créer le moteur SQLAlchemy
 engine = create_engine(
